@@ -1,4 +1,4 @@
-Your initial bank balance is $6.95263e-310
+Your initial bank balance is $6.95261e-310
 
 The total withdrawal amount today is $0.00 and the amount of deposit today is $0.00
 The final amount of money in the bank is $0.00
