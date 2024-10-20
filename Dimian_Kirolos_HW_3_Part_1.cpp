@@ -78,3 +78,36 @@ int main() // This is the function "main"
     // End the code
     return 0;
 }
+
+/* Process complete
+
+outTransactions.txt:
+
+Your initial bank balance is $5000
+
+$200.00 has been withdrawn.
+Your balance after this transaction is $4800.00
+
+$800.00 has been withdrawn.
+Your balance after this transaction is $4000.00
+
+$40.00 has been withdrawn.
+Your balance after this transaction is $3960.00
+
+$90.00 has been deposited.
+Your balance after this transaction is $4050.00
+
+$100.00 has been deposited.
+Your balance after this transaction is $4150.00
+
+$1000.00 has been deposited.
+Your balance after this transaction is $5150.00
+
+$20.00 has been withdrawn.
+Your balance after this transaction is $5130.00
+
+The total withdrawal amount today is $1060.00 and the total deposit today is $1190.00
+
+The final amount of money in the bank is $5130.00
+
+*/
