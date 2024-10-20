@@ -42,25 +42,28 @@ int main() // This is the function "main"
     while (inFile >> Type_Of_Transaction >> Value_Of_Transaction) 
     {        
         // If loop to check if the transaction is a withdrawal
-       
         if (Type_Of_Transaction == 'W') 
         {
-        Money_In_DaBank = Money_In_DaBank - Value_Of_Transaction;
-        outFile << "W" << setw(18) << setfill('.') << Value_Of_Transaction << setw(35) << setfill('.') << Money_In_DaBank << endl;
-        withdrawal = withdrawal + Value_Of_Transaction;
-        Number_Of_Withdrawls += 1;
+        Money_In_DaBank = Money_In_DaBank - Value_Of_Transaction; // Updates the amount of money after the transaction
+        // makes sure that it is printed in the form it should be
+        outFile << "W" << setw(18) << setfill('.') << Value_Of_Transaction << setw(35) << setfill('.') << Money_In_DaBank << endl; 
+        withdrawal = withdrawal + Value_Of_Transaction; // Updates the variable that calculates the total amount withdrawn
+        Number_Of_Withdrawls += 1; // Updates the variable that records the amount of withdrawls
         }   
 
+        // If to check if the transaction is a deposit
         if (Type_Of_Transaction == 'D') 
         {   
-        Money_In_DaBank = Money_In_DaBank + Value_Of_Transaction;
+        Money_In_DaBank = Money_In_DaBank + Value_Of_Transaction; // Updates the amount of money after the transaction
+        // makes sure that it is printed in the form it should be
         outFile << "D" << setw(18) << setfill('.') << Value_Of_Transaction << setw(35) << setfill('.') << Money_In_DaBank << endl;
-        deposit = withdrawal + Value_Of_Transaction;
-        Number_Of_Deposits += 1;
+        deposit = withdrawal + Value_Of_Transaction; // Updates the variable that calculates the total amount withdrawn
+        Number_Of_Deposits += 1; // Updates the variable that records the amount of withdrawls
         }
     }
 
-    // Print statements for the total withdrawal and deposit amounts
+    // Print statements for the total withdrawal and deposit amounts, the amount in the end, and the number of withdrawls and deposits
+    outFile << endl; // skips a line for organization
     outFile << "ENDING BALANCE: $" << Money_In_DaBank << endl;
     outFile << "TOTAL " << Number_Of_Withdrawls << " WITHDRAWLS: $" << withdrawal << endl;
     outFile << "TOTAL " << Number_Of_Deposits << " DEPOSITS: $" << deposit << endl;
@@ -93,6 +96,7 @@ D.............90.00............................4050.00
 D............100.00............................4150.00
 D...........1000.00............................5150.00
 W.............20.00............................5130.00
+
 ENDING BALANCE: $5130.00
 TOTAL 4 WITHDRAWLS: $1060.00
 TOTAL 3 DEPOSITS: $2040.00
